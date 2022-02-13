@@ -1,3 +1,5 @@
+#ifndef SORT_H
+#define SORT_H
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -22,3 +24,4 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 void swap(int *xp, int *yp);
 void swap2(int a, int b, int *array, size_t size);
+#endif /* SORT_H */
