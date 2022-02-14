@@ -7,7 +7,7 @@
  * @array: param
  * @size: param
  */
-void swap2(int a, int b, int *array, size_t size)
+void swap(int a, int b, int *array, size_t size)
 {
 	int t;
 
@@ -37,12 +37,12 @@ int partition(int *array, int low, int high, size_t size)
 		if (array[i] <= pivot)
 		{
 			if (i != newp)
-				swap2(newp, i, array, size);
+				swap(newp, i, array, size);
 			newp++;
 		}
 	}
 	if (newp != high)
-		swap2(newp, high, array, size);
+		swap(newp, high, array, size);
 	return (newp);
 }
 /**
