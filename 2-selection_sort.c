@@ -1,17 +1,5 @@
 #include "sort.h"
 /**
- * swap - function that swaps two elements
- *
- * @xp: parameter
- * @yp: parameter
- */
-void swap(int *xp, int *yp)
-{
-	int tmp = *xp;
-	*xp = *yp;
-	*yp = tmp;
-}
-/**
  * selection_sort - function that sorts an array of integers
  * in ascending order using selection sort
  *
@@ -20,17 +8,22 @@ void swap(int *xp, int *yp)
  */
 void selection_sort(int *array, size_t size)
 {
-	size_t i, j, mini_idx;
+	size_t i, j, position, swap;
 
-	for (i = 0; i < size - 1; i++)
+	for (i = 0; i < (size - 1); i++)
 	{
-		mini_idx = i;
+		position = i;
 		for (j = i + 1; j < size; j++)
 		{
-			if (array[j] < array[mini_idx])
-				mini_idx = j;
+			if (array[position] > array[j])
+				position = j;
 		}
-		swap(&array[mini_idx], &array[i]);
-		print_array(array, size);
+		if (position != i)
+		{
+			swap = array[i];
+			array[i] = array[position];
+			array[position] = swap;
+			print_array(array, size);
+		}
 	}
 }
