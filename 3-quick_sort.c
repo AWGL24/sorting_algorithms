@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * swap2 - second implementation of a function that swaps two elements
+ * swap - second implementation of a function that swaps two elements
  *
  * @a: param
  * @b: param
