@@ -1,13 +1,13 @@
 #include "sort.h"
 /**
- * swap - second implementation of a function that swaps two elements
+ * swap2 - second implementation of a function that swaps two elements
  *
  * @a: param
  * @b: param
  * @array: param
  * @size: param
  */
-void swap(int a, int b, int *array, size_t size)
+void swap2(int a, int b, int *array, size_t size)
 {
 	int t;
 
@@ -37,12 +37,12 @@ int partition(int *array, int low, int high, size_t size)
 		if (array[i] <= pivot)
 		{
 			if (i != newp)
-				swap(newp, i, array, size);
+				swap2(newp, i, array, size);
 			newp++;
 		}
 	}
 	if (newp != high)
-		swap(newp, high, array, size);
+		swap2(newp, high, array, size);
 	return (newp);
 }
 /**
